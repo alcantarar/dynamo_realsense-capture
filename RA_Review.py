@@ -43,13 +43,13 @@ transformationMatrices = calibration.load('newCalibration.cal') #<- Loads, but d
 deviceManager = DeviceManager(rs.context(), rsConfig)
 deviceManager.enable_all_devices()
 
-stream.start(deviceManager, transformationMatrices, saveDirectory='C:/Users/ryans/Buff Drive/Research/RealSense_Validation/JOSS_Review/TEST_DATA' , stream_time=1)
+stream.start(deviceManager, transformationMatrices, saveDirectory='TEST_DATA' , stream_time=1)
 
 #
 #
- # THIS BREAKS THE CODE:
+# THIS BREAKS THE CODE:
 
-folder = 'C:/Users/ryans/Buff Drive/Research/RealSense_Validation/JOSS_Review/TEST_DATA'
+folder = 'TEST_DATA'
 full = 0 #set to 1 to view all frames, set to 0 to view every 10 frames
 
 view.viewPointClouds(folder,full)
